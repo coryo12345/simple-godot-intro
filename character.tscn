@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://eu14fo2xgx8g"]
 
-[ext_resource type="Script" path="res://character.gd" id="1_37ct5"]
+[ext_resource type="Script" path="res://assets/scripts/character.gd" id="1_37ct5"]
 [ext_resource type="SpriteFrames" uid="uid://bxrfao8fddaa5" path="res://assets/character-animations.tres" id="2_db18r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fg37"]

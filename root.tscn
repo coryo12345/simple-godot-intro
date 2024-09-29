@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://cv5pi8fhbqr0k"]
 
-[ext_resource type="Shader" path="res://water.gdshader" id="1_mftdp"]
+[ext_resource type="Shader" path="res://assets/shaders/water.gdshader" id="1_mftdp"]
 [ext_resource type="TileSet" uid="uid://btf4gbn7y3385" path="res://assets/tileset.tres" id="2_m02kd"]
 [ext_resource type="PackedScene" uid="uid://eu14fo2xgx8g" path="res://character.tscn" id="3_7v8dd"]
 
