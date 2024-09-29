@@ -33,6 +33,5 @@ func _physics_process(_delta):
 	if velocity.x != previous_velocity.x || velocity.y != previous_velocity.y:
 		previous_velocity.x = velocity.x
 		previous_velocity.y = velocity.y
-		print(previous_velocity)
 
 	move_and_slide()

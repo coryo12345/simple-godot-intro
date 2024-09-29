@@ -23,7 +23,6 @@ void fragment() {
 		pixel.x += 1.0;
 	}
 
-
 	vec4 noise = texture(NOISE, pixel);
 	vec4 noise2 = texture(NOISE_2, pixel);
 	float tmin = THRESHOLD_MIN + (sin(TIME) * THRESHOLD_DIFF);
