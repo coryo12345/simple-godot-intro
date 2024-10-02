@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://assets/shaders/water.gdshader" id="1_mftdp"]
 [ext_resource type="TileSet" uid="uid://btf4gbn7y3385" path="res://assets/tileset.tres" id="2_m02kd"]
-[ext_resource type="PackedScene" uid="uid://eu14fo2xgx8g" path="res://character.tscn" id="3_7v8dd"]
+[ext_resource type="PackedScene" uid="uid://eu14fo2xgx8g" path="res://scenes/Character/character.tscn" id="3_7v8dd"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6vwlv"]
 frequency = 0.0176
