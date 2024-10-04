@@ -5,7 +5,7 @@ uniform sampler2D NOISE_2;
 
 const float THRESHOLD_MIN = 0.45;
 const float THRESHOLD_DIFF = 0.001; // how much should the wave shape change along the noise
-const float WAVE_THICKNESS = 0.09;
+const float WAVE_THICKNESS = 0.05;
 
 const float MOVEMENT_DISTANCE = 0.02; // how far should it move back and forth
 const float MOVEMENT_FREQ = 0.4; // how fast should it move back and forth
@@ -21,12 +21,15 @@ void vertex() {
 void fragment() {
 	// apply movement & stretch
 	vec2 pixel = vec2((UV.x + sin(TIME*MOVEMENT_FREQ) * MOVEMENT_DISTANCE) / HORIZONTAL_STRETCH, UV.y);
-	if (pixel.x < 0.0) {
-		pixel.x += 1.0;
-	}
 
 	// now pixelate
 	pixel = round(pixel * PIXELATION_FACTOR) / PIXELATION_FACTOR;
+
+	if (pixel.x < 0.0) {
+		pixel.x += 1.0;
+	} else if (pixel.x > 1.0) {
+		pixel.x -= 1.0;
+	}
 
 	vec4 noise = texture(NOISE, pixel);
 	vec4 noise2 = texture(NOISE_2, pixel);

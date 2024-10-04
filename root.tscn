@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://eu14fo2xgx8g" path="res://scenes/Character/character.tscn" id="3_7v8dd"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6vwlv"]
-frequency = 0.0176
+frequency = 0.0056
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1of3m"]
 generate_mipmaps = false
@@ -13,7 +13,7 @@ seamless = true
 noise = SubResource("FastNoiseLite_6vwlv")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_hymxw"]
-frequency = 0.008
+frequency = 0.0071
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vwqi6"]
 generate_mipmaps = false
