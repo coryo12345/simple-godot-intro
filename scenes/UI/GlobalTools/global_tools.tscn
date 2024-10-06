@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://d22e6xem1irs8"]
+
+[ext_resource type="Script" path="res://scenes/UI/GlobalTools/global_tools.gd" id="1_1slyf"]
+
+[node name="GlobalTools" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1slyf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="Backpack" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Inv"
+
+[connection signal="pressed" from="VBoxContainer/Backpack" to="." method="_on_backpack_opened"]

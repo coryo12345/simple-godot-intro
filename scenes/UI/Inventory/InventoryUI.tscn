@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh8i1iwc01ng8"]
+
+[ext_resource type="Script" path="res://scenes/UI/Inventory/inventory_ui.gd" id="1_3nk7x"]
+
+[node name="InventoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_3nk7x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -207.0
+offset_bottom = 207.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Here we would have
+a list of items
+that the character
+has in its \"backpack\""
+fit_content = true
+scroll_active = false
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="close_ui"]

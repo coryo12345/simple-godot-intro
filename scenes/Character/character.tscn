@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://eu14fo2xgx8g"]
+[gd_scene load_steps=7 format=3 uid="uid://eu14fo2xgx8g"]
 
 [ext_resource type="Script" path="res://scenes/Character/character.gd" id="1_37ct5"]
 [ext_resource type="SpriteFrames" uid="uid://bxrfao8fddaa5" path="res://assets/character-animations.tres" id="2_db18r"]
 [ext_resource type="Script" path="res://scenes/Character/animation.gd" id="3_bcvu1"]
 [ext_resource type="Script" path="res://scenes/Character/state_machine.gd" id="4_o7q3v"]
+[ext_resource type="PackedScene" uid="uid://d0u3gj7r4hj6a" path="res://scenes/Inventory/Inventory.tscn" id="5_cser5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fg37"]
 radius = 4.0
@@ -25,3 +26,5 @@ shape = SubResource("CapsuleShape2D_2fg37")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4_o7q3v")
+
+[node name="Inventory" parent="." instance=ExtResource("5_cser5")]
