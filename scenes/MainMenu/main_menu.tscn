@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj2bajyve8n4n"]
+
+[ext_resource type="Script" path="res://assets/scripts/main_menu.gd" id="1_cjuv0"]
+[ext_resource type="PackedScene" uid="uid://cv5pi8fhbqr0k" path="res://scenes/World.tscn" id="2_2g105"]
+[ext_resource type="Texture2D" uid="uid://l0mpd6fby5dn" path="res://assets/img/town.png" id="3_sobe8"]
+[ext_resource type="Texture2D" uid="uid://c0ou6uxlswpap" path="res://assets/img/spooked.png" id="4_pd34k"]
+[ext_resource type="Texture2D" uid="uid://b76pum4l3or77" path="res://assets/img/quit_button.png" id="5_lce4i"]
+[ext_resource type="Script" path="res://scenes/MainMenu/rotate_on_hover.gd" id="6_cxsed"]
+[ext_resource type="Texture2D" uid="uid://bc4ea8ck6bd3b" path="res://assets/img/play_button.png" id="7_f8g8s"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cjuv0")
+new_game_scene = ExtResource("2_2g105")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_sobe8")
+expand_mode = 3
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 250.0
+offset_top = 51.0
+offset_right = 894.0
+offset_bottom = 178.0
+texture = ExtResource("4_pd34k")
+
+[node name="QuitImg" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 659.0
+offset_top = 328.0
+offset_right = 991.0
+offset_bottom = 499.0
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("5_lce4i")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_cxsed")
+
+[node name="PlayImg" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 173.0
+offset_top = 320.0
+offset_right = 519.0
+offset_bottom = 493.0
+size_flags_horizontal = 6
+texture_normal = ExtResource("7_f8g8s")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_cxsed")
+
+[connection signal="pressed" from="QuitImg" to="." method="on_quit_pressed"]
+[connection signal="pressed" from="PlayImg" to="." method="on_play_pressed"]
