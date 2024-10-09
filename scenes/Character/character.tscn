@@ -1,19 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://eu14fo2xgx8g"]
+[gd_scene load_steps=9 format=3 uid="uid://eu14fo2xgx8g"]
 
 [ext_resource type="Script" path="res://scenes/Character/character.gd" id="1_37ct5"]
 [ext_resource type="SpriteFrames" uid="uid://bxrfao8fddaa5" path="res://assets/character-animations.tres" id="2_db18r"]
 [ext_resource type="Script" path="res://scenes/Character/animation.gd" id="3_bcvu1"]
 [ext_resource type="Script" path="res://scenes/Character/state_machine.gd" id="4_o7q3v"]
 [ext_resource type="PackedScene" uid="uid://d0u3gj7r4hj6a" path="res://scenes/Inventory/Inventory.tscn" id="5_cser5"]
+[ext_resource type="Script" path="res://scenes/Character/interact_detector.gd" id="6_25upo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fg37"]
 radius = 4.0
 height = 10.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dleo"]
+
 [node name="Character" type="CharacterBody2D"]
 script = ExtResource("1_37ct5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-0.5, 0)
 sprite_frames = ExtResource("2_db18r")
 animation = &"idle_down"
@@ -28,3 +32,13 @@ shape = SubResource("CapsuleShape2D_2fg37")
 script = ExtResource("4_o7q3v")
 
 [node name="Inventory" parent="." instance=ExtResource("5_cser5")]
+
+[node name="InteractDetector" type="Area2D" parent="."]
+script = ExtResource("6_25upo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_0dleo")
+
+[connection signal="area_entered" from="InteractDetector" to="InteractDetector" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractDetector" to="InteractDetector" method="_on_area_exited"]

@@ -20,9 +20,8 @@ func add_item(item: InventoryItem):
     self.items.append(item)
 
 
-func remove_item(_item: InventoryItem):
-    # TODO
-    pass
+func remove_item(item: InventoryItem):
+    self.items.erase(item)
 
 
 func toggle_inventory_ui():

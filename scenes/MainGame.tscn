@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv5pi8fhbqr0k"]
+
+[ext_resource type="PackedScene" uid="uid://btj1n5vsr4l2s" path="res://scenes/world.tscn" id="1_3i355"]
+[ext_resource type="PackedScene" uid="uid://d22e6xem1irs8" path="res://scenes/UI/GlobalTools/global_tools.tscn" id="4_fswhk"]
+[ext_resource type="PackedScene" uid="uid://dh8i1iwc01ng8" path="res://scenes/UI/Inventory/InventoryUI.tscn" id="5_1odih"]
+[ext_resource type="PackedScene" uid="uid://6t22ws330rqj" path="res://scenes/UI/MainText/main_text_ui.tscn" id="6_tqb45"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="World" parent="." instance=ExtResource("1_3i355")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GlobalTools" parent="UI" instance=ExtResource("4_fswhk")]
+
+[node name="InventoryUI" parent="UI" instance=ExtResource("5_1odih")]
+
+[node name="MainTextUI" parent="UI" instance=ExtResource("6_tqb45")]

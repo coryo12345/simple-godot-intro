@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dj2bajyve8n4n"]
 
-[ext_resource type="Script" path="res://assets/scripts/main_menu.gd" id="1_cjuv0"]
-[ext_resource type="PackedScene" uid="uid://cv5pi8fhbqr0k" path="res://scenes/World.tscn" id="2_2g105"]
+[ext_resource type="Script" path="res://scenes/MainMenu/main_menu.gd" id="1_cjuv0"]
+[ext_resource type="PackedScene" uid="uid://cv5pi8fhbqr0k" path="res://scenes/MainGame.tscn" id="2_2g105"]
 [ext_resource type="Texture2D" uid="uid://l0mpd6fby5dn" path="res://assets/img/town.png" id="3_sobe8"]
 [ext_resource type="Texture2D" uid="uid://c0ou6uxlswpap" path="res://assets/img/spooked.png" id="4_pd34k"]
 [ext_resource type="Texture2D" uid="uid://b76pum4l3or77" path="res://assets/img/quit_button.png" id="5_lce4i"]
