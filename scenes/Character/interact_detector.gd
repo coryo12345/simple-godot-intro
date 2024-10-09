@@ -38,6 +38,7 @@ func attempt_interact():
 		return
 	# this could be probably be improved by looking at which direction the character is facing
 	# for now just try the first
-	var target = self.targets[0]
-	if target.has_method("on_character_interact"):
-		target.call("on_character_interact")
+	for target in self.targets:
+		if target.has_method("on_character_interact"):
+			target.call("on_character_interact")
+			return
