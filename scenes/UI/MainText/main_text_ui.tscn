@@ -13,7 +13,7 @@ content_margin_top = 16.0
 content_margin_right = 16.0
 content_margin_bottom = 16.0
 
-[node name="MainTextUI" type="Control"]
+[node name="MainTextUI" type="Control" node_paths=PackedStringArray("text", "text_window")]
 layout_mode = 3
 anchors_preset = 12
 anchor_top = 1.0
@@ -23,6 +23,9 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 6
 size_flags_vertical = 4
+script = ExtResource("1_epxur")
+text = NodePath("PanelContainer/ConversationWindow/PanelContainer/TextLabel")
+text_window = NodePath("PanelContainer/ConversationWindow")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -38,7 +41,6 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_r86d8")
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 color = Color(1, 0.984314, 0.905882, 1)
-script = ExtResource("1_epxur")
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ConversationWindow"]
 layout_mode = 1

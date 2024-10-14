@@ -7,4 +7,4 @@ class_name Signals
 signal open_inventory(inv: Inventory)
 
 @warning_ignore("unused_signal")
-signal set_main_text_conversation(conversation: Conversation)
+signal set_main_text_conversation(conversation: Conversation, complete_callback: Callable)

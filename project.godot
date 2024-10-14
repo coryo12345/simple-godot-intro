@@ -27,6 +27,10 @@ GlobalSignals="*res://assets/scripts/Signals.gd"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+GlobalUI="GlobalUI Parent Node"
+
 [input]
 
 move_left={

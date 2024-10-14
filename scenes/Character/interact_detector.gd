@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var state = $"../StateMachine"
+@onready var character = $".."
 
 var targets: Array[Area2D] = []
 
@@ -40,5 +41,5 @@ func attempt_interact():
 	# for now just try the first
 	for target in self.targets:
 		if target.has_method("on_character_interact"):
-			target.call("on_character_interact")
+			target.call("on_character_interact", self.character)
 			return

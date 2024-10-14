@@ -10,13 +10,13 @@
 
 [node name="World" parent="." instance=ExtResource("1_3i355")]
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="GlobalUI" type="CanvasLayer" parent="." groups=["GlobalUI"]]
 
-[node name="GlobalTools" parent="UI" instance=ExtResource("4_fswhk")]
+[node name="GlobalTools" parent="GlobalUI" instance=ExtResource("4_fswhk")]
 
-[node name="InventoryUI" parent="UI" instance=ExtResource("5_1odih")]
+[node name="InventoryUI" parent="GlobalUI" instance=ExtResource("5_1odih")]
 
-[node name="MainTextUI" parent="UI" instance=ExtResource("6_tqb45")]
+[node name="MainTextUI" parent="GlobalUI" instance=ExtResource("6_tqb45")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ojds7")
