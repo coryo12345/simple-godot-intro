@@ -7,10 +7,6 @@
 
 [node name="Root" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(-2950.62, 531.918)
-anchor_mode = 0
-
 [node name="World" parent="." instance=ExtResource("1_3i355")]
 
 [node name="UI" type="CanvasLayer" parent="."]
