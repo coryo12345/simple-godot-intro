@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj2bajyve8n4n"]
+[gd_scene load_steps=9 format=3 uid="uid://dj2bajyve8n4n"]
 
 [ext_resource type="Script" path="res://scenes/MainMenu/main_menu.gd" id="1_cjuv0"]
 [ext_resource type="PackedScene" uid="uid://cv5pi8fhbqr0k" path="res://scenes/MainGame.tscn" id="2_2g105"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b76pum4l3or77" path="res://assets/img/quit_button.png" id="5_lce4i"]
 [ext_resource type="Script" path="res://scenes/MainMenu/rotate_on_hover.gd" id="6_cxsed"]
 [ext_resource type="Texture2D" uid="uid://bc4ea8ck6bd3b" path="res://assets/img/play_button.png" id="7_f8g8s"]
+[ext_resource type="AudioStream" uid="uid://c6t6trg8fqs0a" path="res://assets/audio/GameMusic_ForestTheme_24.mp3" id="8_fp122"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -60,6 +61,11 @@ texture_normal = ExtResource("7_f8g8s")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("6_cxsed")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_fp122")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="QuitImg" to="." method="on_quit_pressed"]
 [connection signal="pressed" from="PlayImg" to="." method="on_play_pressed"]
