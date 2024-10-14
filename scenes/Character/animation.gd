@@ -11,6 +11,7 @@ func _process(_delta):
 
 
 func play_animation():
+	self.speed_scale = state.speed_scale
 	match state.state:
 		state.States.WALKING:
 			match state.direction:
