@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b40eipyaqn1gb"
-path="res://.godot/imported/Radish.png-d95915fee3fbd79be899f443af9dc0fd.ctex"
+uid="uid://nv8mow747dky"
+path="res://.godot/imported/dirtpathtileset4.png-390d64f28d8c07d2c3328538c23d07b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/raw/Crops/Summer/Radish.png"
-dest_files=["res://.godot/imported/Radish.png-d95915fee3fbd79be899f443af9dc0fd.ctex"]
+source_file="res://assets/raw/dirtpathtileset4.png"
+dest_files=["res://.godot/imported/dirtpathtileset4.png-390d64f28d8c07d2c3328538c23d07b7.ctex"]
 
 [params]
 

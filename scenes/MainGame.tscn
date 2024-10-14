@@ -20,5 +20,6 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ojds7")
+volume_db = -4.685
 autoplay = true
 parameters/looping = true

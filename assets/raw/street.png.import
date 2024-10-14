@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n6kt2lprg55c"
-path="res://.godot/imported/Spinach.png-7959f8195dd6010c37bce8164a273a94.ctex"
+uid="uid://b3kpdgukrcc5n"
+path="res://.godot/imported/street.png-b36d01a6bd2e187f000e779bb7739cde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/raw/Crops/Fall/Spinach.png"
-dest_files=["res://.godot/imported/Spinach.png-7959f8195dd6010c37bce8164a273a94.ctex"]
+source_file="res://assets/raw/street.png"
+dest_files=["res://.godot/imported/street.png-b36d01a6bd2e187f000e779bb7739cde.ctex"]
 
 [params]
 
