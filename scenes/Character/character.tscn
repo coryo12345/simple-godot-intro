@@ -8,8 +8,8 @@
 [ext_resource type="Script" path="res://scenes/Character/interact_detector.gd" id="6_25upo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fg37"]
-radius = 4.0
-height = 10.0
+radius = 6.0
+height = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dleo"]
 size = Vector2(13, 13)
@@ -19,13 +19,13 @@ script = ExtResource("1_37ct5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-0.5, 0)
+position = Vector2(-1, -9)
 sprite_frames = ExtResource("2_db18r")
 animation = &"walk_up"
 script = ExtResource("3_bcvu1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_2fg37")
 
 [node name="StateMachine" type="Node" parent="."]
@@ -34,13 +34,15 @@ script = ExtResource("4_o7q3v")
 [node name="Inventory" parent="." instance=ExtResource("5_cser5")]
 
 [node name="InteractDetector" type="Area2D" parent="."]
+position = Vector2(-0.5, -9)
 script = ExtResource("6_25upo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector"]
-position = Vector2(0, 13)
+position = Vector2(0.5, 16)
 shape = SubResource("RectangleShape2D_0dleo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-0.5, -9)
 zoom = Vector2(2, 2)
 
 [connection signal="area_entered" from="InteractDetector" to="InteractDetector" method="_on_area_entered"]
