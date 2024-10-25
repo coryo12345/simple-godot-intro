@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://btj1n5vsr4l2s"]
+[gd_scene load_steps=8 format=4 uid="uid://btj1n5vsr4l2s"]
 
 [ext_resource type="TileSet" uid="uid://btf4gbn7y3385" path="res://assets/tileset.tres" id="2_8vvr1"]
 [ext_resource type="PackedScene" uid="uid://eu14fo2xgx8g" path="res://scenes/Character/character.tscn" id="3_3lw2g"]
 [ext_resource type="PackedScene" uid="uid://cxh6272ykidw0" path="res://scenes/NPCs/Chicken/chicken.tscn" id="4_5nklt"]
+[ext_resource type="PackedScene" uid="uid://cn7au3vx2n1r7" path="res://scenes/NPCs/Characters/peasant.tscn" id="4_fvs0a"]
+[ext_resource type="PackedScene" uid="uid://b10xhuvektkgu" path="res://scenes/NPCs/Entities/Spider/spider.tscn" id="5_7ttei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tch0d"]
 size = Vector2(20, 641.5)
@@ -52,3 +54,9 @@ position = Vector2(406, -12.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
 position = Vector2(-26.5, 0)
 shape = SubResource("RectangleShape2D_331ab")
+
+[node name="Peasant" parent="." instance=ExtResource("4_fvs0a")]
+position = Vector2(193, 209)
+
+[node name="Spider" parent="." instance=ExtResource("5_7ttei")]
+position = Vector2(138, 97)

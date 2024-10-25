@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cv5pi8fhbqr0k"]
 
-[ext_resource type="PackedScene" uid="uid://btj1n5vsr4l2s" path="res://scenes/world.tscn" id="1_3i355"]
+[ext_resource type="PackedScene" uid="uid://btj1n5vsr4l2s" path="res://scenes/World.tscn" id="1_3i355"]
 [ext_resource type="PackedScene" uid="uid://d22e6xem1irs8" path="res://scenes/UI/GlobalTools/global_tools.tscn" id="4_fswhk"]
 [ext_resource type="PackedScene" uid="uid://dh8i1iwc01ng8" path="res://scenes/UI/Inventory/InventoryUI.tscn" id="5_1odih"]
 [ext_resource type="AudioStream" uid="uid://buy53q6oowv55" path="res://assets/audio/apple_cider.ogg" id="5_ojds7"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b10xhuvektkgu"]
+
+[ext_resource type="Script" path="res://scenes/NPCs/Entities/Spider/spider.gd" id="1_7tqjo"]
+[ext_resource type="Texture2D" uid="uid://b37kfoeo6kt82" path="res://assets/raw/Entities/spider.png" id="1_8omwc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mjf33"]
+radius = 5.09902
+
+[node name="Spider" type="Area2D"]
+texture_filter = 1
+script = ExtResource("1_7tqjo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mjf33")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, 0)
+texture = ExtResource("1_8omwc")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn7au3vx2n1r7"]
+
+[ext_resource type="Script" path="res://scenes/NPCs/Characters/peasant.gd" id="1_kqs42"]
+[ext_resource type="Texture2D" uid="uid://defffpqne55sf" path="res://assets/raw/NPCs/MiniPeasant.png" id="1_yvmh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eugov"]
+size = Vector2(8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iurj"]
+atlas = ExtResource("1_yvmh1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_habxk"]
+atlas = ExtResource("1_yvmh1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2gs7"]
+atlas = ExtResource("1_yvmh1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6wjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2iurj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_habxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2gs7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Peasant" type="Area2D"]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_kqs42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_eugov")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_p6wjw")
+animation = &"idle"
